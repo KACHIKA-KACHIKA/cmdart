@@ -1,0 +1,87 @@
+.section-block {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1440px;
+	width: 100%;
+}
+
+.banner-block {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-left: 25px;
+	margin-right: 10px;
+}
+
+.banner-photo {
+	width: 70%;
+}
+
+.banner-photo img {
+	width: 100%;
+}
+
+.banner-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	font-family: "Helvetica Neue Thin";
+	margin-left: 20px;
+	margin-right: 40px;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: 100;
+	font-family: "Helvetica Neue Thin";
+}
+
+.banner-text nav {
+	display: flex;
+	justify-content: flex-end;
+	border-bottom-color: #010101;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+.banner-text nav ul {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-right: 60px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+nav ul li {
+	margin: 10px 0;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+}
+
+.text-about {
+	margin-left: 20px;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+.text-about h2 {
+	font-family: "Helvetica Neue Thin";
+	line-height: 1;
+	padding-top: 0px;
+	margin-top: 0px;
+	margin-bottom: 60px;
+}
+
+.text-about h3 {
+	font-family: "Helvetica Neue Thin";
+	font-size: 14px;
+	font-weight: 100;
+}

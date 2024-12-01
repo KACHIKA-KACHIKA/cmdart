@@ -1,0 +1,16 @@
+@font-face {
+	font-family: "Helvetica Neue";
+	src: url("HelveticaNeue-Medium.otf") format("opentype");
+	font-family: "Helvetica Neue Thin";
+	src: url("HelveticaNeue-Thin.otf") format("opentype");
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #f6f6f6;
+	font-family: "Helvetica Neue";
+
+	border-left: 25px solid black;   /* Левая полоска */
+	border-right: 25px solid black;  /* Правая полоска */
+}
