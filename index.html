@@ -7,10 +7,23 @@
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta name="description" content="Добро пожаловать в дизайн студию cmd+art!">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="styles/header.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/header.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/buttons.css">
+	<link rel="stylesheet" type="text/css" href="styles/work.css">
+	<link rel="stylesheet" type="text/css" href="styles/footer.css">
 	<title>CMD+ART</title>
+	<script>
+		async function loadContent(id, file) {
+			const response = await fetch(file);
+			const content = await response.text();
+			document.getElementById(id).innerHTML = content;
+		}
+		window.onload = () => {
+			loadContent("section-work", "works.html");
+		};
+	</script>
 </head>
 
 <body>
@@ -32,7 +45,7 @@
 				<div class="banner-photo">
 					<img src="images/welcome.png" alt="Заставка">
 				</div>
-				<div class="banner-text">
+				<div class="banner-text" style="justify-content: flex-end;">
 					<h2 class="text-head" style="	border-top-color: #010101;	border-top-style: solid;	border-top-width: 2px;">Мы в
 						социальных сетях</h2>
 					<nav>
@@ -46,30 +59,118 @@
 			</article>
 		</section>
 
-		<section class="space-section-block" style="height: 500px;">
+		<section class="space-section-block">
 		</section>
-		<section class="section-block" >
+
+		<section class="section-block">
 			<div class="text-about" style="background-color: #000000;">
-				<h2 class="text-head" style="color: white;">Мы создаем</h2>
+				<h2 class="text-head" style="color: white; padding: 0;">Мы создаем</h2>
 				<h3 style="color: white;">уникальные и качественные дизайны, которые помогут вашему проекту выделиться среди
 					остальных.</h3>
 			</div>
 			<div class="text-about" style="
 					border-top: 2px solid #010101;
 					border-bottom: 2px solid #010101;">
-				<h2 class="text-head">Мы учитываем</h2>
+				<h2 class="text-head" style="padding: 0;">Мы учитываем</h2>
 				<h3>все аспекты вашего проекта, чтобы обеспечить максимальную удовлетворенность результатом.</h3>
 			</div>
 			<div class="text-about" style="background-color: #6642DA; margin-right: 40px;">
-				<h2 class="text-head" style="color: white;">Наша команда</h2>
+				<h2 class="text-head" style="color: white; padding: 0;">Наша команда</h2>
 				<h3 style="color: white;">— это настоящие профессионалы, каждый
 					из которых обладает уникальными навыками
 					и знаниями. </h3>
 			</div>
 		</section>
+
+		<section class="section-block section-block--spaced">
+			<div class="text-about" style="align-content: flex-end;">
+				<form method="POST" action="">
+					<button type="submit" class="btn-main">Связаться с нами
+					</button>
+				</form>
+			</div>
+
+			<div class="text-about" style="width: 34%;">
+				<h3 style="width: 200px; margin-bottom: 0px;">Мы стремимся создавать дизайн, который будет
+					не только визуально привлекательным,
+					но и функциональным.
+					<br>
+					<br>
+					Мы работаем над разными проектами,
+					от мелких до крупных.
+				</h3>
+			</div>
+		</section>
+
+		<section class="space-section-block">
+		</section>
+
+		<section class="section-block">
+			<div class="text-about" style="width: 33%; flex-direction: column;">
+				<h2 class="text-head--underlined">Дизайн логотипа</h2>
+				<h2 class="text-head--underlined">Брендинг</h2>
+				<h2 class="text-head--underlined">Еще дизайн</h2>
+				<h2 class="text-head">Еще какой-то дизайн</h2>
+			</div>
+			<div class="text-about" style="width: 33%;">
+				<h3 style="margin: 0;">Описание услуги описание услуги описание услуги описание услуги описание услуги. Описание
+					услуги описание услуги описание</h3>
+				<h3 style="margin: 0;">Описание услуги описание услуги описание услуги описание услуги описание услуги. Описание
+					услуги описание услуги описание</h3>
+				<h3 style="margin: 0;">Описание услуги описание услуги описание услуги описание услуги описание услуги. Описание
+					услуги описание услуги описание</h3>
+				<h3 style="margin: 0;">Описание услуги описание услуги описание услуги описание услуги описание услуги. Описание
+					услуги описание услуги описание</h3>
+			</div>
+		</section>
+
+		<section class="space-section-block">
+		</section>
+
+		<section class="section-work" id="section-work">
+		</section>
+
+		<section class="space-section-block">
+		</section>
+
 	</main>
-	<footer>
-		<p>Copyright (c) 2024. Все права защищены.</p>
+	<footer class="footer">
+		<div class="footer__addr">
+			<h1 class="footer__logo">CMD+ART</h1>
+
+			<h2>Contact Us</h2>
+			<h3>+7 000-00-00</h3>
+			<h3>С 10:00 до 17:00</h3>
+
+			<address>
+				<a class="footer__btn" href="mailto:cmdart@gmail.com">Email</a>
+			</address>
+		</div>
+
+		<ul class="footer__nav">
+			<li class="nav__item">
+				<h2 class="nav__title">Media</h2>
+				<ul class="nav__ul">
+					<li><a href="#">Вконтакте</a></li>
+					<li><a href="#">Телеграм</a></li>
+					<li><a href="#">Тикток</a></li>
+				</ul>
+			</li>
+
+			<li class="nav__item">
+				<h2 class="nav__title">Navigation</h2>
+
+				<ul class="nav__ul nav__ul--extra">
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li><a href="#">Мерч</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="legal">
+			<p>&copy; @ 2024, дизайн-студия “CTRL+ART”</p>
+		</div>
 	</footer>
 </body>
 
