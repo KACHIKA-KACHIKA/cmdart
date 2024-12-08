@@ -12,6 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/buttons.css">
 	<link rel="stylesheet" type="text/css" href="styles/work.css">
+	<link rel="stylesheet" type="text/css" href="styles/merch.css">
+	<link rel="stylesheet" type="text/css" href="styles/hexagon.css">
 	<link rel="stylesheet" type="text/css" href="styles/footer.css">
 	<title>CMD+ART</title>
 	<script>
@@ -39,7 +41,7 @@
 		</nav>
 	</header>
 	<main>
-
+		<div class="hexagon-container"></div>
 		<section class="section-block">
 			<article class="banner-block">
 				<div class="banner-photo">
@@ -60,6 +62,7 @@
 		</section>
 
 		<section class="space-section-block">
+			<div class="rotated-text">О нас</div>
 		</section>
 
 		<section class="section-block">
@@ -103,6 +106,7 @@
 		</section>
 
 		<section class="space-section-block">
+			<div class="rotated-text">Услуги</div>
 		</section>
 
 		<section class="section-block">
@@ -125,14 +129,25 @@
 		</section>
 
 		<section class="space-section-block">
+			<!-- <div class="rotated-text">Наши работы</div> -->
 		</section>
 
+		<div class="work-section-header-text">
+			<h1>Наши работы</h1>
+		</div>
 		<section class="section-work" id="section-work">
 		</section>
 
-		<section class="space-section-block">
-		</section>
+		<!-- <section class="space-section-block">
+		</section> -->
 
+		<section class="section-block">
+			<article class="merch-section">
+				<h1>МЕРЧ!</h1>
+				<h2>Comming soon</h2>
+				<h3>Я не знаю что тут написать...</h3>
+			</article>
+		</section>
 	</main>
 	<footer class="footer">
 		<div class="footer__addr">
@@ -173,5 +188,45 @@
 		</div>
 	</footer>
 </body>
+<script>
+	const section = document.querySelector('.merch-section');
+	['left', 'right'].forEach(side => {
+		const textElement = document.createElement('div');
+		textElement.className = 'border-text';
+		textElement.style[side] = '0';
+
+		if (side === 'right') {
+			textElement.style.transform = 'rotate(180deg)';
+			textElement.style.transformOrigin = 'center center';
+			textElement.style[side] = '-14px';
+		}
+
+		textElement.textContent = 'Мерч! '.repeat(10);
+		section.appendChild(textElement);
+	});
+
+
+	function placeHexagons() {
+		const container = document.querySelector('.hexagon-container');
+
+		const hexagons = [
+			{ left: '54vw', top: '50vh', size: 380, rotation: 60 },
+		];
+		hexagons.forEach(settings => {
+			const hexagon = document.createElement('div');
+			hexagon.className = 'hexagon';
+
+			hexagon.style.left = settings.left;
+			hexagon.style.top = settings.top;
+			hexagon.style.width = `${settings.size}px`;
+			hexagon.style.height = `${settings.size}px`;
+			hexagon.style.transform = `rotate(${settings.rotation}deg)`;
+
+			container.appendChild(hexagon);
+		});
+	}
+	placeHexagons();
+
+</script>
 
 </html>

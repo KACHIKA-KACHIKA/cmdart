@@ -2,11 +2,27 @@
 	display: flex;
 	width: 100%;
 }
+
 .section-block--spaced {
 	justify-content: space-between;
 }
-.space-section-block{
-	height: 300px;
+
+.space-section-block {
+	position: relative;
+	margin-top: 200px;
+	width: 100%;
+	height: 400px;
+}
+
+.rotated-text {
+	position: absolute;
+	/* left: -1%; */
+	transform: rotate(90deg) translateY(-30%);
+	transform-origin: left center;
+	white-space: nowrap;
+	font-family: "Helvetica Neue Thin";
+	font-size: 96px;
+	text-align: center;
 }
 .banner-block {
 	display: flex;
@@ -69,6 +85,7 @@ nav ul li a {
 	flex-wrap: wrap;
 	margin-left: 20px;
 }
+
 .text-about h2 {
 	font-family: "Helvetica Neue Thin";
 	line-height: 1;
